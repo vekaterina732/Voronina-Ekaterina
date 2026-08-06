@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Люмен — аналитика, которая видит бизнес</title>
+<meta name="description" content="Люмен — платформа продуктовой аналитики для команд, которые принимают решения на данных, а не на интуиции.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#" class="logo">Люмен<span class="logo-dot">.</span></a>
+    <nav class="nav" id="nav">
+      <a href="#product">Продукт</a>
+      <a href="#features">Возможности</a>
+      <a href="#metrics">Результаты</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#cta" class="nav-cta">Запросить демо</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="overline reveal">Продуктовая аналитика · b2b saas</p>
+      <h1 class="reveal d1">Аналитика, которая <em>видит</em> ваш бизнес насквозь</h1>
+      <p class="lead reveal d2">Люмен собирает события, воронки и выручку в одну систему — и отвечает на вопрос «что делать дальше» раньше, чем вы его зададите.</p>
+      <div class="hero-actions reveal d3">
+        <a href="#cta" class="btn btn-primary">Запросить демо</a>
+        <a href="#product" class="btn btn-ghost">Смотреть продукт →</a>
+      </div>
+      <dl class="hero-stats reveal d4">
+        <div><dt data-counter="420">0</dt><dd>команд используют ежедневно</dd></div>
+        <div><dt data-counter="38" data-suffix="%">0</dt><dd>средний рост конверсии</dd></div>
+        <div><dt data-counter="6" data-suffix=" мин">0</dd><dd>от данных до инсайта</dd></div>
+      </dl>
+    </div>
+    <div class="hero-visual reveal d2" id="heroVisual" aria-hidden="true">
+      <div class="dash-card dash-main">
+        <div class="dash-head"><span></span><span></span><span></span></div>
+        <div class="dash-body">
+          <div class="dash-kpi"><small>Выручка · май</small><strong>₽ 18,4 млн</strong><b class="up">+12,6%</b></div>
+          <svg class="dash-line" viewBox="0 0 320 120" preserveAspectRatio="none">
+            <path id="linePath" d="M0,95 C30,90 45,70 70,72 C95,74 110,50 140,52 C170,54 185,30 215,34 C245,38 260,18 290,22 L320,16" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path class="line-fill" d="M0,95 C30,90 45,70 70,72 C95,74 110,50 140,52 C170,54 185,30 215,34 C245,38 260,18 290,22 L320,16 L320,120 L0,120 Z" fill="url(#fade)" stroke="none"/>
+            <circle id="lineDot" r="4.5" fill="currentColor" opacity="0"/>
+            <defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="currentColor" stop-opacity=".18"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+            </linearGradient></defs>
+          </svg>
+          <div class="dash-bars">
+            <i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:38%"></i><i style="--h:71%"></i><i style="--h:64%"></i><i style="--h:86%"></i><i style="--h:78%"></i><i style="--h:96%"></i>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card dash-note">
+        <b>Инсайт дня</b>
+        <p>Сегмент «вернувшиеся после 30 дней» приносит в 3,1 раза больше выручки, чем новые пользователи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients">
+  <div class="container">
+    <p class="clients-label">Нам доверяют команды</p>
+    <div class="clients-row">
+      <span>Альфа-Логистика</span><span>Точка Роста</span><span>Дом Книги</span><span>Северный Банк</span><span>Фабрика Окон</span>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>MRR ₽18,4 млн · Retention 94% · NPS 67 · 2,1 млрд событий в месяц · Uptime 99,98% · 40+ интеграций ·&nbsp;</span><span>MRR ₽18,4 млн · Retention 94% · NPS 67 · 2,1 млрд событий в месяц · Uptime 99,98% · 40+ интеграций ·&nbsp;</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <p class="overline reveal">Возможности</p>
+    <h2 class="reveal d1">Три причины, по которым команды <em>остаются</em> с нами</h2>
+    <div class="feature-list">
+      <article class="feature reveal">
+        <span class="feature-num">01</span>
+        <div>
+          <h3>Все данные — в одном окне</h3>
+          <p>События из продукта, CRM, платёжной системы и рекламных кабинетов стягиваются автоматически. Больше не нужно собирать отчёт в пяти вкладках и спорить о том, чья цифра верная.</p>
+        </div>
+        <ul class="feature-tags"><li>40+ интеграций</li><li>Webhooks</li><li>API</li></ul>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-num">02</span>
+        <div>
+          <h3>Воронки, которые объясняют, а не пугают</h3>
+          <p>Стройте воронки любой глубины и смотрите, где теряются деньги. Люмен подсвечивает аномалии сам: падение конверсии, необычный отток, всплеск возвратов.</p>
+        </div>
+        <ul class="feature-tags"><li>Когорты</li><li>Сегменты</li><li>Аномалии</li></ul>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-num">03</span>
+        <div>
+          <h3>Инсайты на человеческом языке</h3>
+          <p>Каждое утро — короткая сводка: что изменилось, почему и что с этим делать. Аналитик тратит время на решения, а не на выгрузки.</p>
+        </div>
+        <ul class="feature-tags"><li>Ежедневный дайджест</li><li>Telegram-бот</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT TABS -->
+<section class="product" id="product">
+  <div class="container">
+    <div class="product-head">
+      <div>
+        <p class="overline reveal">Продукт</p>
+        <h2 class="reveal d1">Один интерфейс — <em>три</em> взгляда на бизнес</h2>
+      </div>
+      <div class="tabs reveal d2" role="tablist">
+        <button class="tab active" data-tab="t1" role="tab">Воронки</button>
+        <button class="tab" data-tab="t2" role="tab">Когорты</button>
+        <button class="tab" data-tab="t3" role="tab">Выручка</button>
+      </div>
+    </div>
+    <div class="product-panels reveal d2">
+      <div class="panel active" id="t1">
+        <div class="mock mock-funnel">
+          <div class="funnel-row" style="--w:100%"><b>Визиты</b><span>128 400</span></div>
+          <div class="funnel-row" style="--w:72%"><b>Регистрация</b><span>92 450</span></div>
+          <div class="funnel-row" style="--w:41%"><b>Активация</b><span>52 680</span></div>
+          <div class="funnel-row" style="--w:23%"><b>Оплата</b><span>29 530</span></div>
+        </div>
+        <p>Конверсия из визита в оплату — 23%. Главная потеря — шаг активации: стоит пересмотреть онбординг.</p>
+      </div>
+      <div class="panel" id="t2">
+        <div class="mock mock-cohort">
+          <table>
+            <tr><th>Когорта</th><th>Нед. 1</th><th>Нед. 2</th><th>Нед. 3</th><th>Нед. 4</th></tr>
+            <tr><td>Апрель</td><td>100%</td><td>64%</td><td>51%</td><td>44%</td></tr>
+            <tr><td>Март</td><td>100%</td><td>61%</td><td>47%</td><td>39%</td></tr>
+            <tr><td>Февраль</td><td>100%</td><td>55%</td><td>42%</td><td>33%</td></tr>
+          </table>
+        </div>
+        <p>Удержание растёт четвёртый месяц подряд — изменения в онбординге работают.</p>
+      </div>
+      <div class="panel" id="t3">
+        <div class="mock mock-revenue">
+          <div class="rev-row"><span>Подписки</span><div class="rev-bar" style="--w:84%"></div><b>₽ 11,2 млн</b></div>
+          <div class="rev-row"><span>Доп. модули</span><div class="rev-bar" style="--w:46%"></div><b>₽ 4,9 млн</b></div>
+          <div class="rev-row"><span>Консалтинг</span><div class="rev-bar" style="--w:23%"></div><b>₽ 2,3 млн</b></div>
+        </div>
+        <p>Подписки дают 61% выручки — самый устойчивый источник дохода продукта.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics" id="metrics">
+  <div class="container">
+    <p class="overline light reveal">Результаты клиентов</p>
+    <div class="metrics-grid">
+      <div class="metric reveal"><strong data-counter="38" data-suffix="%">0</strong><span>рост конверсии в оплату за первый квартал</span></div>
+      <div class="metric reveal d1"><strong data-counter="12" data-prefix="−" data-suffix=" ч">0</strong><span>экономии в неделю на ручной отчётности</span></div>
+      <div class="metric reveal d2"><strong data-counter="94" data-suffix="%">0</strong><span>команд продлевают подписку на второй год</span></div>
+      <div class="metric reveal d3"><strong data-counter="6" data-suffix=" нед.">0</strong><span>средний срок внедрения под ключ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <p class="overline reveal">Отзывы</p>
+    <div class="slider reveal d1" id="slider">
+      <blockquote class="slide active">
+        <p>«Мы перестали спорить на планёрках, чьи цифры правильные. Теперь спорим о решениях — и это совсем другой уровень разговора».</p>
+        <footer><b>Марина Соколова</b><span>CPO, Точка Роста</span></footer>
+      </blockquote>
+      <blockquote class="slide">
+        <p>«Внедрили за пять недель. На шестой отключили три старых отчёта и никто не заметил их исчезновения».</p>
+        <footer><b>Игорь Ланской</b><span>Директор по данным, Северный Банк</span></footer>
+      </blockquote>
+      <blockquote class="slide">
+        <p>«Утренний дайджест Люмена заменил мне час работы аналитика в день. Это лучшая строка в бюджете года».</p>
+        <footer><b>Ольга Тверская</b><span>CEO, Дом Книги</span></footer>
+      </blockquote>
+    </div>
+    <div class="slider-nav">
+      <button id="prevSlide" aria-label="Предыдущий отзыв">←</button>
+      <div class="dots" id="dots"></div>
+      <button id="nextSlide" aria-label="Следующий отзыв">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-head">
+      <div>
+        <p class="overline reveal">Тарифы</p>
+        <h2 class="reveal d1">Честная цена — <em>без</em> звонка менеджеру</h2>
+      </div>
+      <div class="billing-toggle reveal d2" role="group" aria-label="Период оплаты">
+        <span class="bt-label">Помесячно</span>
+        <button class="bt-switch" id="billingSwitch" role="switch" aria-checked="false" aria-label="Годовая оплата"><i></i></button>
+        <span class="bt-label">За год <b class="bt-badge">−20%</b></span>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan reveal">
+        <h3>Старт</h3>
+        <p class="plan-for">Для небольших команд, которые только встают на данные</p>
+        <div class="plan-price"><b class="price" data-month="4900" data-year="3920">4 900</b><span>₽/мес</span></div>
+        <ul>
+          <li>До 100 000 событий в месяц</li>
+          <li>3 проекта, 5 пользователей</li>
+          <li>Воронки и базовые отчёты</li>
+          <li>Ежедневный дайджест</li>
+        </ul>
+        <a href="#cta" class="btn btn-ghost plan-btn">Начать бесплатно</a>
+      </article>
+      <article class="plan plan-dark reveal d1">
+        <span class="plan-flag">Выбор команд</span>
+        <h3>Команда</h3>
+        <p class="plan-for">Для продуктовых отделов с несколькими направлениями</p>
+        <div class="plan-price"><b class="price" data-month="14900" data-year="11920">14 900</b><span>₽/мес</span></div>
+        <ul>
+          <li>До 2 млн событий в месяц</li>
+          <li>Безлимит проектов и пользователей</li>
+          <li>Когорты, сегменты, аномалии</li>
+          <li>SQL-режим и выгрузка сырых данных</li>
+          <li>Персональный внедренец</li>
+        </ul>
+        <a href="#cta" class="btn btn-primary plan-btn">Запросить демо</a>
+      </article>
+      <article class="plan reveal d2">
+        <h3>Корпорация</h3>
+        <p class="plan-for">Для банков, ритейла и on-premise развёртывания</p>
+        <div class="plan-price"><b class="price price-custom">индивидуально</b></div>
+        <ul>
+          <li>Безлимит событий</li>
+          <li>On-premise и выделенный контур</li>
+          <li>SLA 99,9% с штрафными обязательствами</li>
+          <li>Аудит безопасности и DPO</li>
+        </ul>
+        <a href="#cta" class="btn btn-ghost plan-btn">Обсудить условия</a>
+      </article>
+    </div>
+    <p class="pricing-note reveal">14 дней бесплатно на любом тарифе — на ваших реальных данных.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container faq-grid">
+    <div>
+      <p class="overline reveal">Вопросы</p>
+      <h2 class="reveal d1">Спрашивали? <em>Отвечаем.</em></h2>
+    </div>
+    <div class="accordion reveal d2">
+      <details>
+        <summary>Сколько занимает внедрение?</summary>
+        <p>В среднем шесть недель: две на подключение источников, две на настройку событийной модели, две на обучение команды. Быстрее — если у вас уже есть чистый трекинг.</p>
+      </details>
+      <details>
+        <summary>Нужен ли свой аналитик, чтобы пользоваться Люменом?</summary>
+        <p>Нет. Интерфейс рассчитан на продуктовых менеджеров и маркетологов. Аналитику Люмен тоже понравится — есть SQL-режим и выгрузка сырых событий.</p>
+      </details>
+      <details>
+        <summary>Как вы храните данные?</summary>
+        <p>Данные хранятся в России, шифруются при передаче и в покое. Возможно развёртывание on-premise для банков и крупного ритейла.</p>
+      </details>
+      <details>
+        <summary>Есть ли пробный период?</summary>
+        <p>Да, 14 дней на ваших реальных данных — этого хватает, чтобы увидеть первые инсайты. Пилот сопровождает наш внедренец.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="container cta-inner">
+    <h2 class="reveal">Посмотрите на свой бизнес <em>насквозь</em></h2>
+    <p class="reveal d1">Демо занимает 30 минут. Покажем Люмен на данных, похожих на ваши.</p>
+    <form class="cta-form reveal d2" id="demoForm" novalidate>
+      <input type="email" id="demoEmail" placeholder="Рабочая почта" required>
+      <button type="submit" class="btn btn-primary">Запросить демо</button>
+    </form>
+    <p class="form-note" id="formNote"></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#" class="logo light">Люмен<span class="logo-dot">.</span></a>
+      <p class="footer-note">Продуктовая аналитика для команд, которые думают.</p>
+    </div>
+    <div class="footer-col">
+      <b>Продукт</b>
+      <a href="#features">Возможности</a>
+      <a href="#product">Интерфейс</a>
+      <a href="#metrics">Результаты</a>
+    </div>
+    <div class="footer-col">
+      <b>Компания</b>
+      <a href="#">О нас</a>
+      <a href="#">Блог</a>
+      <a href="#">Вакансии</a>
+    </div>
+    <div class="footer-col">
+      <b>Контакты</b>
+      <a href="mailto:hello@lumen.example">hello@lumen.example</a>
+      <a href="tel:+74951234567">+7 495 123-45-67</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Люмен. Все права защищены.</span>
+    <span>Дизайн и разработка — Екатерина Воронина</span>
+  </div>
+</footer>
+
+<a href="../index.html" class="back-link" title="Назад к портфолио Екатерины Ворониной"><span>←</span> Портфолио</a>
+<script src="js/main.js"></script>
+</body>
+</html>

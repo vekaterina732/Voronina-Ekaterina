@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Élise — Vêtements femme · Paris</title>
+<meta name="description" content="Maison Élise — maison de couture parisienne. Robes, vestes et maille en éditions limitées, confectionnées dans notre atelier du Marais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce">Livraison offerte en France dès 150 € · Retours sous 30 jours</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav nav-left" id="nav">
+      <a href="#collection">Collection</a>
+      <a href="#atelier">L'Atelier</a>
+      <a href="#journal">Journal</a>
+    </nav>
+    <a href="#" class="logo">Maison <em>Élise</em></a>
+    <div class="header-right">
+      <a href="#collection" class="header-link">Boutique</a>
+      <button class="wish-btn" id="wishBtn" aria-label="Favoris">
+        <svg viewBox="0 0 24 24" width="17" height="17"><path d="M12 21 C5 15 2 11 2 7.5 C2 4.5 4.5 2.5 7 2.5 C9 2.5 11 4 12 5.5 C13 4 15 2.5 17 2.5 C19.5 2.5 22 4.5 22 7.5 C22 11 19 15 12 21 Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <b class="cart-count" id="wishCount">0</b>
+      </button>
+      <button class="cart-btn" id="cartBtn" aria-label="Panier">
+        Panier <b class="cart-count" id="cartCount">0</b>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="overline reveal">Collection Printemps — Été 2026</p>
+      <h1 class="reveal d1">L'élégance ne se remarque pas.<br><em>Elle se devine.</em></h1>
+      <p class="hero-lead reveal d2">Des pièces coupées à la main dans notre atelier du Marais, en éditions de cinquante exemplaires. Ni plus, ni moins.</p>
+      <div class="hero-actions reveal d3">
+        <a href="#collection" class="btn btn-dark">Découvrir la collection</a>
+        <a href="#atelier" class="link-arrow">Visiter l'atelier →</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="hero-frame">
+        <img src="img/robe-camille.jpg" alt="Robe Camille — crêpe de soie, édition nº 07" class="hero-photo">
+        <p class="hero-caption">Nº 07 — Robe Camille</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container values-grid">
+    <div class="reveal"><b>Éditions limitées</b><span>50 exemplaires par modèle, numérotés à la main</span></div>
+    <div class="reveal d1"><b>Confection parisienne</b><span>Toutes les pièces sont cousues dans le 3ᵉ arrondissement</span></div>
+    <div class="reveal d2"><b>Tissus certifiés</b><span>Laines, lin et soie issus de filatures françaises et italiennes</span></div>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+<section class="collection" id="collection">
+  <div class="container">
+    <div class="collection-head">
+      <div>
+        <p class="overline reveal">La boutique</p>
+        <h2 class="reveal d1">La collection</h2>
+      </div>
+      <div class="shop-tools reveal d2">
+        <div class="filters" id="filters">
+          <button class="filter active" data-cat="all">Tout</button>
+          <button class="filter" data-cat="robes">Robes</button>
+          <button class="filter" data-cat="vestes">Vestes</button>
+          <button class="filter" data-cat="maille">Maille</button>
+          <button class="filter" data-cat="jupes">Jupes &amp; Pantalons</button>
+        </div>
+        <select id="sort" class="sort" aria-label="Trier">
+          <option value="featured">Notre sélection</option>
+          <option value="price-asc">Prix croissant</option>
+          <option value="price-desc">Prix décroissant</option>
+        </select>
+      </div>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+    <p class="empty-note" id="emptyNote" hidden>Aucune pièce dans cette catégorie pour le moment.</p>
+  </div>
+</section>
+
+<!-- ATELIER -->
+<section class="atelier" id="atelier">
+  <div class="container atelier-grid">
+    <div class="atelier-visual reveal" aria-hidden="true">
+      <div class="swatch s1"></div>
+      <div class="swatch s2"></div>
+      <div class="swatch s3"></div>
+    </div>
+    <div class="atelier-copy">
+      <p class="overline light reveal">L'atelier</p>
+      <h2 class="reveal d1">Douze mains, une seule exigence</h2>
+      <p class="reveal d2">Maison Élise est née en 2014 dans un arrière-boutique de la rue de Turenne. Douze ans plus tard, l'atelier compte huit couturières et une coupeuse — et aucune machine qui presse le pas.</p>
+      <p class="reveal d3">Chaque modèle est dessiné par Élise Moreau, toilé sur mannequin, puis décliné en cinquante exemplaires. Lorsqu'un tissu s'épuise, le modèle s'éteint avec lui.</p>
+      <dl class="atelier-stats reveal d4">
+        <div><dt data-counter="12">0</dt><dd>années de métier</dd></div>
+        <div><dt data-counter="9">0</dt><dd>artisanes à l'atelier</dd></div>
+        <div><dt data-counter="50">0</dt><dd>exemplaires, jamais plus</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNAL -->
+<section class="journal" id="journal">
+  <div class="container">
+    <p class="overline reveal">Journal</p>
+    <h2 class="reveal d1">Notes de l'atelier</h2>
+    <div class="journal-grid">
+      <article class="note reveal">
+        <span class="note-date">12 mai 2026</span>
+        <h3>Le lin de Normandie est arrivé</h3>
+        <p>Trois rouleaux de lin lavé, tissé à Bolbec. Ce sera la robe Héloïse et rien d'autre.</p>
+        <a href="#" class="link-arrow">Lire la note →</a>
+      </article>
+      <article class="note reveal d1">
+        <span class="note-date">28 avril 2026</span>
+        <h3>Pourquoi nous ne faisons pas de soldes</h3>
+        <p>Cinquante exemplaires, un prix juste toute l'année. Une explication que nous devons à nos clientes.</p>
+        <a href="#" class="link-arrow">Lire la note →</a>
+      </article>
+      <article class="note reveal d2">
+        <span class="note-date">9 avril 2026</span>
+        <h3>Portraits : Jeanne, première main</h3>
+        <p>Vingt-sept ans de couture, dont douze chez nous. Rencontre dans l'atelier, entre deux ourlets.</p>
+        <a href="#" class="link-arrow">Lire la note →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <h2 class="reveal">La lettre de la maison</h2>
+    <p class="reveal d1">Une fois par mois : les nouveaux modèles, les tissus qui arrivent, les portes ouvertes de l'atelier.</p>
+    <form class="newsletter-form reveal d2" id="newsForm" novalidate>
+      <input type="email" id="newsEmail" placeholder="Votre adresse e-mail" required>
+      <button type="submit" class="btn btn-dark">S'abonner</button>
+    </form>
+    <p class="news-note" id="newsNote"></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#" class="logo light">Maison <em>Élise</em></a>
+      <p class="footer-note">24 rue de Turenne, 75003 Paris<br>Du mardi au samedi, 11h — 19h</p>
+    </div>
+    <div class="footer-col">
+      <b>Boutique</b>
+      <a href="#collection">Collection</a>
+      <a href="#collection">Robes</a>
+      <a href="#collection">Vestes</a>
+      <a href="#collection">Maille</a>
+    </div>
+    <div class="footer-col">
+      <b>La maison</b>
+      <a href="#atelier">L'atelier</a>
+      <a href="#journal">Journal</a>
+      <a href="#">Livraison &amp; retours</a>
+      <a href="#">Guide des tailles</a>
+    </div>
+    <div class="footer-col">
+      <b>Contact</b>
+      <a href="mailto:bonjour@maison-elise.example">bonjour@maison-elise.example</a>
+      <a href="tel:+33144556677">+33 1 44 55 66 77</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Maison Élise, Paris</span>
+    <span>Site conçu et développé par Ekaterina Voronina</span>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Panier">
+  <div class="cart-head">
+    <h3>Votre panier</h3>
+    <button class="cart-close" id="cartClose" aria-label="Fermer">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot" id="cartFoot">
+    <div class="cart-total"><span>Sous-total</span><b id="cartTotal">0 €</b></div>
+    <p class="cart-ship" id="cartShip"></p>
+    <button class="btn btn-dark btn-wide" id="checkoutBtn">Passer commande</button>
+  </div>
+</aside>
+
+<!-- SIZE MODAL -->
+<div class="modal-overlay" id="sizeOverlay">
+  <div class="size-modal" role="dialog" aria-modal="true">
+    <button class="cart-close" id="sizeClose" aria-label="Fermer">✕</button>
+    <p class="size-cat" id="sizeCat"></p>
+    <h3 id="sizeName"></h3>
+    <p class="size-price" id="sizePrice"></p>
+    <p class="size-label">Choisissez votre taille</p>
+    <div class="size-options" id="sizeOptions"></div>
+    <button class="btn btn-dark btn-wide" id="addToCartBtn" disabled>Ajouter au panier</button>
+  </div>
+</div>
+
+<!-- QUICK VIEW -->
+<div class="modal-overlay" id="qvOverlay">
+  <div class="qv-modal" role="dialog" aria-modal="true">
+    <button class="cart-close" id="qvClose" aria-label="Fermer">✕</button>
+    <div class="qv-visual" id="qvVisual"></div>
+    <div class="qv-body">
+      <p class="size-cat" id="qvCat"></p>
+      <h3 id="qvName"></h3>
+      <p class="size-price" id="qvPrice"></p>
+      <p class="qv-desc" id="qvDesc"></p>
+      <ul class="qv-details">
+        <li>Confectionnée à la main dans notre atelier du Marais</li>
+        <li>Édition numérotée — 50 exemplaires maximum</li>
+        <li>Livraison sous 48h, retours sous 30 jours</li>
+      </ul>
+      <p class="size-label">Choisissez votre taille</p>
+      <div class="size-options" id="qvSizes"></div>
+      <div class="qv-foot">
+        <div class="qty qv-qty">
+          <button id="qvMinus" aria-label="Moins">−</button><span id="qvQty">1</span><button id="qvPlus" aria-label="Plus">+</button>
+        </div>
+        <button class="btn btn-dark" id="qvAdd" disabled>Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<a href="../index.html" class="back-link" title="Назад к портфолио Екатерины Ворониной"><span>←</span> Портфолио</a>
+<script src="js/main.js"></script>
+</body>
+</html>

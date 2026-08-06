@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Solana — Cocina española · Valencia</title>
+<meta name="description" content="Casa Solana: taberna y arrocería en el corazón de Valencia. Tapas, paellas al fuego de leña y vinos de la tierra desde 1987.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#" class="logo">Casa <em>Solana</em></a>
+    <nav class="nav" id="nav">
+      <a href="#carta">La Carta</a>
+      <a href="#galeria">De la cocina</a>
+      <a href="#historia">Historia</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#reserva" class="nav-cta">Reservar mesa</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"><img src="img/hero.jpg" alt="Paella al fuego de leña de naranjo" fetchpriority="high"></div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="hero-overline reveal">Taberna · Arrocería · Valencia, 1987</p>
+    <h1 class="reveal d1">El fuego lento,<br>la mesa <em>larga</em></h1>
+    <p class="hero-lead reveal d2">Arroces al fuego de leña de naranjo, tapas de mercado y vinos que nuestro abuelo ya servía en porrón. A cinco minutos del Mercado Central.</p>
+    <div class="hero-actions reveal d3">
+      <a href="#reserva" class="btn btn-primary">Reservar mesa</a>
+      <a href="#carta" class="btn btn-outline">Ver la carta</a>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="container strip-grid">
+      <div><b>Mar — Vie</b><span>13:00 — 16:30 · 20:00 — 23:30</span></div>
+      <div><b>Sáb — Dom</b><span>13:00 — 17:00 · 20:00 — 00:00</span></div>
+      <div><b>Carrer de la Pau, 12</b><span>46001 València</span></div>
+      <div><a href="tel:+34961234567" class="strip-phone">960 123 456</a><span>reservas y encargos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENÚ DEL DÍA -->
+<section class="del-dia">
+  <div class="container del-dia-grid">
+    <div class="del-dia-media reveal">
+      <figure class="del-dia-photo">
+        <img src="img/menu-dia.jpg" alt="Arroz del senyoret, recién salido del fuego" loading="lazy">
+      </figure>
+      <div class="del-dia-card">
+        <span class="del-dia-tag">Menú del día · 19,50 €</span>
+        <h3>Hoy en la cocina</h3>
+        <ul>
+          <li>Ensalada de naranja, bacalao y aceitunas</li>
+          <li>Arroz del senyoret con alioli suave</li>
+          <li>Naranja caramelizada con helado de turrón</li>
+          <li>Pan, bebida y café incluidos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="del-dia-copy">
+      <p class="overline reveal">De lunes a viernes, mediodía</p>
+      <h2 class="reveal d1">El mediodía sabe a <em>casa</em></h2>
+      <p class="reveal d2">Cada mañana bajamos al Mercado Central y el menú se escribe con lo que encontramos: verdura de la huerta, pescado de la lonja, fruta de temporada. Por eso el menú de hoy no es el de ayer — ni el de mañana.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LA CARTA -->
+<section class="carta" id="carta">
+  <div class="container">
+    <p class="overline reveal">La carta</p>
+    <h2 class="reveal d1">Tapas, arroces y <em>brasa</em></h2>
+    <p class="carta-note reveal d2">Precios en euros, IVA incluido. Pan y aperitivo de la casa: 2,50 € por persona.</p>
+    <div class="menu-tabs reveal d3" id="menuTabs">
+      <button class="mtab active" data-cat="tapas">Tapas</button>
+      <button class="mtab" data-cat="arroces">Arroces</button>
+      <button class="mtab" data-cat="brasa">Brasa</button>
+      <button class="mtab" data-cat="postres">Postres</button>
+      <button class="mtab" data-cat="vinos">Vinos</button>
+    </div>
+    <div class="menu-list" id="menuList"></div>
+    <p class="menu-allergen reveal">¿Alergias o intolerancias? Pregunta a nuestro equipo — adaptamos casi todos los platos.</p>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="historia" id="historia">
+  <div class="container historia-grid">
+    <div class="historia-copy">
+      <p class="overline light reveal">Nuestra historia</p>
+      <h2 class="reveal d1">Tres generaciones detrás de la barra</h2>
+      <p class="reveal d2">Abrió el abuelo Ramón en 1987, con doce mesas y una paellera que aún cuelga en la cocina. Su hija Carmen convirtió la taberna en arrocería. Hoy, la tercera generación sigue encendiendo el fuego de leña cada mañana a las once.</p>
+      <dl class="historia-stats reveal d3">
+        <div><dt data-counter="39">0</dt><dd>años de fuego</dd></div>
+        <div><dt data-counter="18">0</dt><dd>arroces en carta</dd></div>
+        <div><dt data-counter="120">0</dt><dd>referencias de vino</dd></div>
+      </dl>
+    </div>
+    <figure class="historia-photo reveal d2">
+      <img src="img/fuego.jpg" alt="Nuestro cocinero removiendo la paella sobre el fuego de leña" loading="lazy">
+      <figcaption>La paella se hace al momento: 35 minutos de fuego.<br>Merece la espera.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria" id="galeria">
+  <div class="container galeria-head">
+    <div>
+      <p class="overline light reveal">De la cocina</p>
+      <h2 class="reveal d1">Así sale del <em>fuego</em></h2>
+    </div>
+    <div class="gallery-nav reveal d2">
+      <button id="galPrev" aria-label="Anterior">←</button>
+      <button id="galNext" aria-label="Siguiente">→</button>
+    </div>
+  </div>
+  <div class="gallery-track reveal d2" id="galTrack">
+    <figure class="g-tile"><img src="img/g-paella.jpg" alt="Paella valenciana" loading="lazy"><figcaption>Paella valenciana</figcaption></figure>
+    <figure class="g-tile"><img src="img/g-pulpo.jpg" alt="Pulpo a la brasa" loading="lazy"><figcaption>Pulpo a la brasa</figcaption></figure>
+    <figure class="g-tile"><img src="img/g-gambas.jpg" alt="Gambas al ajillo" loading="lazy"><figcaption>Gambas al ajillo</figcaption></figure>
+    <figure class="g-tile"><img src="img/g-jamon.jpg" alt="Jamón de bellota" loading="lazy"><figcaption>Jamón de bellota</figcaption></figure>
+    <figure class="g-tile"><img src="img/g-tiramisu.jpg" alt="Tiramisú de turrón" loading="lazy"><figcaption>Tiramisú de turrón</figcaption></figure>
+    <figure class="g-tile"><img src="img/g-vermut.jpg" alt="Vermut de la casa" loading="lazy"><figcaption>Vermut de la casa</figcaption></figure>
+  </div>
+  <p class="container gallery-hint">Arrastra para ver más →</p>
+</section>
+
+<!-- OPINIONES -->
+<section class="opiniones" id="opiniones">
+  <div class="container">
+    <p class="overline reveal">Opiniones</p>
+    <h2 class="reveal d1">Lo que dicen en la barra</h2>
+    <div class="slider reveal d2" id="slider">
+      <blockquote class="slide active">
+        <p>«La paella valenciana de aquí es la de siempre, la de verdad. Pollo, conejo, garrofó y punto. Volveré cada vez que pase por Valencia».</p>
+        <footer><b>Marta G.</b><span>Madrid · reseña verificada</span></footer>
+      </blockquote>
+      <blockquote class="slide">
+        <p>«Pedimos el arroz negro y una ensalada de tomate del Perelló que no se me olvidará. Servicio de los que ya no quedan».</p>
+        <footer><b>Jordi R.</b><span>Barcelona · reseña verificada</span></footer>
+      </blockquote>
+      <blockquote class="slide">
+        <p>«Reservamos para doce personas y salió todo perfecto. El tiramisú de turrón es un escándalo. Precio más que honesto».</p>
+        <footer><b>Anne-Laure D.</b><span>Lyon · reseña verificada</span></footer>
+      </blockquote>
+    </div>
+    <div class="slider-nav">
+      <button id="prevSlide" aria-label="Anterior">←</button>
+      <div class="dots" id="dots"></div>
+      <button id="nextSlide" aria-label="Siguiente">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVA -->
+<section class="reserva" id="reserva">
+  <div class="container reserva-grid">
+    <div class="reserva-copy">
+      <p class="overline light reveal">Reservas</p>
+      <h2 class="reveal d1">Tu mesa te está esperando</h2>
+      <p class="reveal d2">Reserva online para grupos de hasta 8 personas. Para grupos mayores o celebraciones, llámanos y montamos mesa larga en el comedor del patio.</p>
+      <ul class="reserva-notes reveal d3">
+        <li>Confirmamos por SMS en menos de 15 minutos</li>
+        <li>Los arroces se encargan al llegar: 35 minutos de fuego</li>
+        <li>Terraza disponible de abril a octubre</li>
+      </ul>
+    </div>
+    <form class="reserva-form reveal d2" id="resForm" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="rName">Nombre *</label>
+          <input type="text" id="rName" placeholder="María Ferrer" required>
+          <small class="err">Indícanos tu nombre</small>
+        </div>
+        <div class="field">
+          <label for="rPhone">Teléfono *</label>
+          <input type="tel" id="rPhone" placeholder="600 123 456" required>
+          <small class="err">Revisa el número</small>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="rDate">Fecha *</label>
+          <input type="date" id="rDate" required>
+          <small class="err">Elige una fecha</small>
+        </div>
+        <div class="field">
+          <label for="rTime">Hora *</label>
+          <select id="rTime">
+            <option value="">—</option>
+            <optgroup label="Mediodía">
+              <option>13:00</option><option>13:30</option><option>14:00</option>
+              <option>14:30</option><option>15:00</option>
+            </optgroup>
+            <optgroup label="Noche">
+              <option>20:00</option><option>20:30</option><option>21:00</option>
+              <option>21:30</option><option>22:00</option>
+            </optgroup>
+          </select>
+          <small class="err">Elige una hora</small>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Comensales</label>
+          <div class="stepper">
+            <button type="button" id="gMinus" aria-label="Menos">−</button>
+            <b id="gCount">2</b>
+            <button type="button" id="gPlus" aria-label="Más">+</button>
+            <span>personas</span>
+          </div>
+          <small class="err" id="guestsErr">Para grupos de más de 8, llámanos al 960 123 456</small>
+        </div>
+        <div class="field">
+          <label for="rZone">Zona</label>
+          <select id="rZone">
+            <option>Sin preferencia</option><option>Terraza</option><option>Comedor</option><option>Barra</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="rMsg">¿Algo que debamos saber?</label>
+        <textarea id="rMsg" rows="3" placeholder="Alergias, trona, celebración…"></textarea>
+      </div>
+      <div class="res-live" id="resLive" aria-live="polite">
+        <b>Tu reserva</b>
+        <p id="resLiveText">Rellena el formulario y aquí verás el resumen al momento.</p>
+      </div>
+      <button type="submit" class="btn btn-primary btn-wide">Solicitar reserva</button>
+      <div class="form-success" id="resSuccess" hidden>
+        <b>¡Reserva solicitada!</b>
+        <p id="resSummary"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#" class="logo light">Casa <em>Solana</em></a>
+      <p class="footer-note">Carrer de la Pau, 12 · 46001 València<br>A 5 minutos del Mercado Central</p>
+    </div>
+    <div class="footer-col">
+      <b>Horario</b>
+      <span>Mar — Vie: 13:00–16:30 · 20:00–23:30</span>
+      <span>Sáb — Dom: 13:00–17:00 · 20:00–00:00</span>
+      <span>Lunes cerrado</span>
+    </div>
+    <div class="footer-col">
+      <b>Contacto</b>
+      <a href="tel:+34961234567">960 123 456</a>
+      <a href="mailto:hola@casasolana.example">hola@casasolana.example</a>
+    </div>
+    <div class="footer-col">
+      <b>Síguenos</b>
+      <a href="#">Instagram</a>
+      <a href="#">TripAdvisor</a>
+      <a href="#">Google Maps</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 1987–2026 Casa Solana</span>
+    <span>Web diseñada y desarrollada por Ekaterina Voronina</span>
+  </div>
+</footer>
+
+<a href="../index.html" class="back-link" title="Назад к портфолио Екатерины Ворониной"><span>←</span> Портфолио</a>
+<script src="js/main.js"></script>
+</body>
+</html>
