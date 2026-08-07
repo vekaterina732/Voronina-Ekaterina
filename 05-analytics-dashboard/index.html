@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northwind Analytics — Product Analytics Dashboard</title>
+<meta name="description" content="Northwind Analytics — a product analytics dashboard for B2B SaaS. Revenue, customers, orders and settings in one app-like interface built with vanilla JavaScript.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <a class="sidebar-logo" href="#/overview">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="url(#lg)"/>
+        <path d="M9 22 V14 M16 22 V9 M23 22 V17" stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+      </svg>
+      <span>Northwind<em>Analytics</em></span>
+    </a>
+
+    <nav class="side-nav">
+      <a href="#/overview" data-route="overview">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v4h-7zM13 11h7v9h-7zM4 14h7v6H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <span>Overview</span>
+      </a>
+      <a href="#/customers" data-route="customers">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6M16 5.4a3 3 0 0 1 0 5.7M18.5 14.7c1.3.7 2.2 1.9 2.5 3.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <span>Customers</span>
+      </a>
+      <a href="#/orders" data-route="orders">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-2-1.4-2 1.4-2-1.4L10 21l-2-1.4L6 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.5 8h5M9.5 12h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <span>Orders</span>
+      </a>
+      <a href="#/settings" data-route="settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.8v2.6M12 18.6v2.6M2.8 12h2.6M18.6 12h2.6M5.5 5.5l1.8 1.8M16.7 16.7l1.8 1.8M18.5 5.5l-1.8 1.8M7.3 16.7l-1.8 1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-user">
+      <span class="avatar" aria-hidden="true">EV</span>
+      <div class="user-meta">
+        <b>Ekaterina Voronina</b>
+        <span>Product Lead</span>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- MAIN COLUMN -->
+  <div class="main">
+
+    <header class="topbar">
+      <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <label class="search" for="globalSearch">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input type="search" id="globalSearch" placeholder="Search customers…" autocomplete="off">
+      </label>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </button>
+    </header>
+
+    <main class="content" id="content">
+
+      <!-- OVERVIEW -->
+      <section class="view" id="view-overview" aria-labelledby="overview-title">
+        <div class="page-head">
+          <div>
+            <h1 id="overview-title">Overview</h1>
+            <p class="muted">Last 30 days · all metrics updated in real time</p>
+          </div>
+        </div>
+
+        <div class="kpi-grid">
+          <article class="card kpi">
+            <div class="kpi-top"><span class="kpi-label">Revenue</span><span class="delta up">↑ 12.4%</span></div>
+            <div class="kpi-value" data-kpi="revenue">—</div>
+            <div class="kpi-sub muted">vs previous 30 days</div>
+          </article>
+          <article class="card kpi">
+            <div class="kpi-top"><span class="kpi-label">Active users</span><span class="delta up">↑ 8.1%</span></div>
+            <div class="kpi-value" data-kpi="users">—</div>
+            <div class="kpi-sub muted">vs previous 30 days</div>
+          </article>
+          <article class="card kpi">
+            <div class="kpi-top"><span class="kpi-label">Conversion</span><span class="delta up">↑ 0.6 pp</span></div>
+            <div class="kpi-value" data-kpi="conversion">—</div>
+            <div class="kpi-sub muted">trial → paid</div>
+          </article>
+          <article class="card kpi">
+            <div class="kpi-top"><span class="kpi-label">Churn</span><span class="delta down">↓ 0.3 pp</span></div>
+            <div class="kpi-value" data-kpi="churn">—</div>
+            <div class="kpi-sub muted">monthly logo churn</div>
+          </article>
+        </div>
+
+        <div class="panel-grid">
+          <div class="card chart-card span-2">
+            <div class="card-head">
+              <h2>Revenue</h2>
+              <span class="muted">Daily recurring revenue, last 30 days</span>
+            </div>
+            <div class="line-chart" id="lineChart"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>Traffic sources</h2>
+              <span class="muted">Sessions share</span>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut" id="donutChart"></div>
+              <ul class="legend" id="donutLegend"></ul>
+            </div>
+          </div>
+
+          <div class="card span-3">
+            <div class="card-head">
+              <h2>Signups</h2>
+              <span class="muted">New accounts per week, last 8 weeks</span>
+            </div>
+            <div class="bar-chart" id="barChart"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOMERS -->
+      <section class="view" id="view-customers" aria-labelledby="customers-title">
+        <div class="page-head">
+          <div>
+            <h1 id="customers-title">Customers</h1>
+            <p class="muted" id="custSummary">—</p>
+          </div>
+        </div>
+
+        <div class="card table-card">
+          <div class="table-toolbar">
+            <div class="chips" id="custChips" role="group" aria-label="Filter by status">
+              <button class="chip active" data-status="all">All</button>
+              <button class="chip" data-status="active">Active</button>
+              <button class="chip" data-status="trial">Trial</button>
+              <button class="chip" data-status="churned">Churned</button>
+            </div>
+            <label class="search small" for="custSearch">
+              <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <input type="search" id="custSearch" placeholder="Filter by name or company…" autocomplete="off">
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table" id="custTable">
+              <thead>
+                <tr>
+                  <th data-sort="name" class="sortable">Customer</th>
+                  <th data-sort="company" class="sortable">Company</th>
+                  <th data-sort="plan" class="sortable">Plan</th>
+                  <th data-sort="mrr" class="sortable num">MRR</th>
+                  <th data-sort="status" class="sortable">Status</th>
+                  <th data-sort="joined" class="sortable">Joined</th>
+                </tr>
+              </thead>
+              <tbody id="custBody"></tbody>
+            </table>
+          </div>
+
+          <div class="table-foot">
+            <span class="muted" id="custInfo">—</span>
+            <div class="pager" id="custPager"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORDERS -->
+      <section class="view" id="view-orders" aria-labelledby="orders-title">
+        <div class="page-head">
+          <div>
+            <h1 id="orders-title">Orders</h1>
+            <p class="muted">Recent billing events across all workspaces</p>
+          </div>
+        </div>
+
+        <div class="card table-card">
+          <div class="table-toolbar">
+            <div class="chips" id="orderChips" role="group" aria-label="Filter by status">
+              <button class="chip active" data-status="all">All</button>
+              <button class="chip" data-status="paid">Paid</button>
+              <button class="chip" data-status="pending">Pending</button>
+              <button class="chip" data-status="refunded">Refunded</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table" id="orderTable">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th class="num">Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="orderBody"></tbody>
+            </table>
+          </div>
+
+          <div class="table-foot totals">
+            <span class="muted" id="orderCount">—</span>
+            <span class="order-total" id="orderTotal">—</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="view" id="view-settings" aria-labelledby="settings-title">
+        <div class="page-head">
+          <div>
+            <h1 id="settings-title">Settings</h1>
+            <p class="muted">Workspace preferences — saved automatically to this browser</p>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <div class="card setting-card">
+            <div class="setting-copy">
+              <h2>Appearance</h2>
+              <p class="muted">Switch between light and dark interface themes.</p>
+            </div>
+            <div class="setting-control">
+              <span class="setting-name">Dark theme</span>
+              <button class="switch" id="setTheme" role="switch" aria-checked="false" aria-label="Dark theme">
+                <span class="knob"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="card setting-card">
+            <div class="setting-copy">
+              <h2>Table density</h2>
+              <p class="muted">Compact rows fit more data on screen in Customers and Orders.</p>
+            </div>
+            <div class="setting-control">
+              <span class="setting-name">Compact tables</span>
+              <button class="switch" id="setCompact" role="switch" aria-checked="false" aria-label="Compact tables">
+                <span class="knob"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="card setting-card">
+            <div class="setting-copy">
+              <h2>Display currency</h2>
+              <p class="muted">All monetary values across the dashboard are converted on the fly.</p>
+            </div>
+            <div class="setting-control">
+              <span class="setting-name">Currency</span>
+              <div class="segmented" id="setCurrency" role="group" aria-label="Currency">
+                <button data-cur="USD" class="active">USD $</button>
+                <button data-cur="EUR">EUR €</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card setting-card">
+            <div class="setting-copy">
+              <h2>Reset</h2>
+              <p class="muted">Restore default preferences and clear saved settings.</p>
+            </div>
+            <div class="setting-control">
+              <button class="btn-ghost" id="resetSettings">Reset settings</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<div class="chart-tooltip" id="chartTooltip" hidden></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
