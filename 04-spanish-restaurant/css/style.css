@@ -259,6 +259,10 @@ h3{font-family:var(--font-display);font-size:1.3rem;font-weight:600}
 .back-link span{color:var(--gold);transition:transform .25s}
 .back-link:hover{background:#a83416;transform:translateY(-2px)}
 .back-link:hover span{color:#fff;transform:translateX(-3px)}
+@media (max-width:720px){
+  .back-link{left:auto;right:1rem;bottom:1rem;padding:.7rem .85rem;font-size:0;gap:0}
+  .back-link span{font-size:1rem}
+}
 
 /* ---------- Reveal ---------- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
@@ -273,8 +277,6 @@ h3{font-family:var(--font-display);font-size:1.3rem;font-weight:600}
   .menu-list{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
   .galeria-head{flex-direction:column;align-items:flex-start}
-}
-@media (max-width:720px){
   .burger{display:block}
   .nav{
     position:fixed;inset:0;background:var(--dark);flex-direction:column;
@@ -283,6 +285,8 @@ h3{font-family:var(--font-display);font-size:1.3rem;font-weight:600}
   }
   .nav.open{transform:none}
   .nav a{font-size:1.4rem;font-family:var(--font-display);text-transform:none}
+}
+@media (max-width:720px){
   .hero-inner{padding:150px 24px 80px}
   .del-dia-photo img{height:300px}
   .del-dia-media{padding-bottom:0}

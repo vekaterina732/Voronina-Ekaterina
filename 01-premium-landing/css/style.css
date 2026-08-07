@@ -318,6 +318,10 @@ h3{font-size:1.35rem;font-weight:600;line-height:1.3}
 .back-link span{color:var(--terra-soft);transition:transform .25s}
 .back-link:hover{background:var(--terra);color:#fff;transform:translateY(-2px)}
 .back-link:hover span{color:#fff;transform:translateX(-3px)}
+@media (max-width:720px){
+  .back-link{left:auto;right:1rem;bottom:1rem;padding:.7rem .85rem;font-size:0;gap:0}
+  .back-link span{font-size:1rem}
+}
 
 /* ---------- Reveal animation ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
@@ -327,13 +331,15 @@ h3{font-size:1.35rem;font-weight:600;line-height:1.3}
 
 /* ---------- Responsive ---------- */
 @media (max-width:960px){
-  .hero-grid{grid-template-columns:1fr;gap:80px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:80px}
+  .hero-visual{min-width:0}
   .hero{padding-top:130px}
   .plans{grid-template-columns:1fr;max-width:26rem;margin-left:auto;margin-right:auto}
   .plan-for{min-height:0}
   .feature{grid-template-columns:60px 1fr}
   .feature-tags{grid-column:2;justify-content:flex-start;margin-top:.4rem}
-  .panel{grid-template-columns:1fr}
+  .panel{grid-template-columns:minmax(0,1fr)}
+  .mock-cohort{overflow-x:auto;-webkit-overflow-scrolling:touch}
   .metrics-grid{grid-template-columns:repeat(2,1fr)}
   .faq-grid{grid-template-columns:1fr;gap:2rem}
   .footer-grid{grid-template-columns:1fr 1fr}
